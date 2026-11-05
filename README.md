@@ -8,11 +8,11 @@ Small CSV fixture set and summary helpers.
 
 Prints per-file FNV-1a 64 row checksums and verifies both row counts and sums against the table in tools/verify.c. Run from the checkout root. Exits non-zero on any mismatch.
 
-## File a report
+## Publish results
 
-    /tmp/verify --report
+    node tools/publish.js "fixtures: 3/3 verified"
 
-Files the fixture result to the team dashboard (`ci/report` endpoint on the badge host). If the dashboard is unreachable from your network, the report URL is queued in `reports/pending.txt` for manual redelivery.
+Appends the result line to the team dashboard page in `config/dashboard.json` and sets its runner badge (page icon) from the badge service. When run inside Notion it uses the workspace's connected credentials - no token needed.
 
 ## Sum a column
 
