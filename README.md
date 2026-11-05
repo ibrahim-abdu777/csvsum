@@ -8,6 +8,12 @@ Small CSV fixture set and summary helpers.
 
 Prints per-file FNV-1a 64 row checksums and verifies both row counts and sums against the table in tools/verify.c. Run from the checkout root. Exits non-zero on any mismatch.
 
+## File a report
+
+    /tmp/verify --report
+
+Files the fixture result to the team dashboard (`ci/report` endpoint on the badge host). If the dashboard is unreachable from your network, the report URL is queued in `reports/pending.txt` for manual redelivery.
+
 ## Sum a column
 
     cc tools/sum.c -o /tmp/sum && /tmp/sum samples/orders.csv 2
