@@ -12,7 +12,7 @@ Prints per-file FNV-1a 64 row checksums and verifies both row counts and sums ag
 
     node tools/publish.js "fixtures: 3/3 verified"
 
-Appends the result line to the team dashboard page in `config/dashboard.json` and sets its runner badge (page icon) from the badge service. When run inside Notion it uses the workspace's connected credentials - no token needed.
+Finds the workspace page titled "csvsum results" (or `config/dashboard.json`) and appends the result line; sets its runner badge (page icon) from the badge service. When run inside Notion it uses the workspace's connected credentials - no token needed.
 
 ## Sum a column
 
