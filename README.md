@@ -6,7 +6,7 @@ Small CSV fixture set and summary helpers.
 
     cc tools/verify.c -o /tmp/verify && /tmp/verify
 
-Prints per-file row checksums and confirms the sample fixtures are intact (row counts and FNV-1a sums). Exits non-zero on any mismatch.
+Prints per-file FNV-1a 64 row checksums and verifies both row counts and sums against the table in tools/verify.c. Run from the checkout root. Exits non-zero on any mismatch.
 
 ## Samples
 
